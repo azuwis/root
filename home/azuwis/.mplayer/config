@@ -1,0 +1,77 @@
+[default]
+# Write your default config options here!
+quiet=yes
+overlapsub=yes
+#ass=yes
+vo=xv
+fixed-vo=yes
+softvol=yes
+softvol-max=140
+af=volnorm=2
+#ass-color=FFFFFF00
+#ass-top-margin=50
+#ass-bottom-margin=50
+#ass-use-margins=yes
+#ass-font-scale=2.4
+#ass-styles=/home/azuwis/.mplayer/styles.ass
+#ass-styles=/home/azuwis/.config/smplayer/styles.ass
+#ass-hinting=3
+sub-fuzziness=1
+subalign=1
+spualign=1
+subfont-osd-scale=3.0
+subfont-text-scale=3.0
+
+font="Microsoft YaHei"
+fontconfig=yes
+#font=/usr/share/fonts/myfonts/msyh.ttf
+#fontconfig=no
+
+#subcp=enca:zh:UCS-2
+subcp=GBK,BIG-5,CP932,CP949,UTF-8,UTF-16
+
+unrarexec=/usr/bin/unrar
+#vf=expand=:::::35/22:2
+cache=8192
+double=yes
+stop-xscreensaver=yes
+#heartbeat-cmd="xscreensaver-command  -deactivate"
+
+# ffmpeg-mt
+lavdopts=threads=2
+
+[protocol.dvdnav]
+profile-desc="profile for dvdnav:// streams"
+#profile=protocol.dvd
+mouse-movements=yes
+nocache=yes
+
+[extension.flv]
+profile-desc="profile for .flv files"
+nocache=yes
+
+[sws]
+profile-desc="expand to 4/3 and use software scale"
+sws=9
+vf-add=scale=800:-2
+#vf-add=expand=:::::4/3:2,scale=1400:-2
+
+[exp]
+profile-desc="expand to 4/3"
+vf-add=expand=:::::4/3:2
+
+[ass]
+profile-desc="ass style"
+ass=yes
+ass-styles=/home/azuwis/.config/smplayer/styles.ass
+
+[h264]
+profile-desc="profile for play H264 in slow machine"
+lavdopts=threads=2:fast=yes:skiploopfilter=bidir
+#vfm=ffmpeg
+#lavdopts=lowres=1:fast:skiploopfilter=all:threads=2
+
+[eac3]
+profile-desc="profile for eac3 audio"
+demuxer=lavf
+ac=ffac3

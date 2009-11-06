@@ -1,0 +1,15 @@
+debug 4
+set ftp:fix-pasv-address 0
+set ftp:use-fxp off
+set net:reconnect-interval-base 28
+set net:reconnect-interval-multiplier 1
+set bmk:save-passwords 1
+set ftp:charset "gbk"
+set file:charset "UTF-8"
+set mirror:order "*.srt *.idx *.sub *.rar *.nfo */"
+set ftp:anon-pass "azuwis@azu.2288.org"
+set net:persist-retries 500
+set ftp:retry-530 "incorrect"
+set ftp:retry-530-anonymous "incorrect"
+set mirror:set-permissions 0
+alias lls !ls
