@@ -1,0 +1,20 @@
+# rubygems
+export PATH="$PATH:/var/lib/gems/1.8/bin"
+
+alias grep='grep -i --color=auto'
+alias em='emacs -nw'
+alias ec='emacsclient'
+
+#export CLICOLOR=1
+#export LSCOLORS=gxfxaxdxcxegedabagacad
+#export PATH=$PATH:~/bin
+export LV="-c"
+export RI="-f ansi"
+export LESS="-R"
+# beep on cmd finish
+export PROMPT_COMMAND="echo -ne '\a'"
+
+# psp
+export PSPDEV="/usr/local/pspdev"
+export PSPSDK="$PSPDEV/psp/sdk"
+export PATH="$PATH:$PSPDEV/bin:$PSPSDK/bin"
