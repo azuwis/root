@@ -226,6 +226,15 @@ globalkeys = awful.util.table.join(
             end
         end),
 
+    -- Make window ontop
+    awful.key({ modkey, }, "t",
+        function ()
+            local c = client.focus
+            if c then
+                c.ontop = not c.ontop
+            end
+        end),
+
     -- App
     awful.key({ }, "Pause", function () awful.util.spawn("/home/azuwis/bin/lock-screen.sh") end),
     awful.key({ }, "XF86Display", function () awful.util.spawn("/home/azuwis/bin/extern_monitor.sh right") end),
@@ -364,7 +373,9 @@ awful.rules.rules = {
     { rule = { class = "Cview" },
       properties = { floating = true } },
     -- Set Firefox to always map on tags number 2 of screen 1.
-    { rule = { class = "Firefox" },
+    { rule = { class = "Firefox", instance = "Navigator" },
+      properties = { tag = tags[1][2] } },
+    { rule = { class = "Chromium-browser" },
       properties = { tag = tags[1][2] } },
     { rule = { class = "Icedove-bin" },
       properties = { tag = tags[1][3] } },
