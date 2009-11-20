@@ -1,0 +1,66 @@
+"""""" Mappings
+"""toggle menubar
+noremap gm :set guioptions!=m<CR>
+"""viewsource in new tab
+noremap gf :tab viewsource<CR>
+"""pageinfo
+noremap gp :dialog pageinfo<CR>
+"""google
+noremap gs :tabopen g<SPACE>
+"""swap d & D
+noremap d D
+noremap D d
+"""Search
+noremap sg :execute "tabopen g " + util.readFromClipboard()<CR>
+noremap sd :execute "tabopen d " + util.readFromClipboard()<CR>
+noremap sm :execute "tabopen m " + util.readFromClipboard()<CR>
+noremap ss :execute "tabopen s " + util.readFromClipboard()<CR>
+noremap sc :execute "tabopen c " + util.readFromClipboard()<CR>
+
+"""""" Options
+set nextpattern^=^\s*下一页\s*$,^\s*下一章\s*$
+set previouspattern^=^\s*上一页\s*$,^\s*上一章\s*$
+set defsearch=
+set guioptions+=nT
+"""Open in new tab for some command
+set newtab=all
+"""AwesomeBar's feature, from http://vimperator.org/trac/ticket/135
+"set complete=lf
+"set wildoptions=auto
+"""Always in normal mode
+set focuscontent
+"Set title
+set titlestring=Firefox
+
+"""""" Abbreviations
+"""Add google command
+command! -nargs=+ g tabopen g <args>
+"""From http://www.mozdev.org/pipermail/vimperator/2009-March/003926.html
+"command! -complete=bookmark -nargs=+ ob :o <args>
+"command! -complete=completion.history -nargs=+ oh :o <args>
+"command! -complete=search -nargs=+ os :o <args>
+
+
+"""""" AutoCMD
+"autocmd LocationChange .* :js modes.passAllKeys = /mail\.google\.com/.test(buffer.URL)
+"autocmd LocationChange .* :js modes.passAllKeys = /www\.google\.com\/reader\/view/.test(buffer.URL)
+
+"""""" Style
+highlight StatusLine color: #272727; background: white;
+highlight StatusLineSecure color: black; background: #CCFF99;
+highlight TabClose display: none;
+"highlight TabIcon display: none;
+
+"""""" Extension compatibility
+"""From http://vimperator.org/trac/ticket/33
+"set! extensions.checkCompatibility=false
+"""Vimperator 2.0 only:
+"style! -n addons-version addons.mozilla.org <<EOF
+"    /* Show the install button for extensions for older versions of Firefox */
+"    .install-container { display: block !important; }
+"    .exp-loggedout > .install-button { display: none !important }
+"EOF
+"""And this will disable the install-dialog delay
+"set! security.dialog_enable_delay=0
+
+" vim: set ft=vimperator:

@@ -8,7 +8,8 @@
 
 -- {{{ Main
 theme = {}
-theme.wallpaper_cmd = { "awsetbg /home/azuwis/theme/wallpapers/dark/eleganceMod1400x1050.png" }
+theme.wallpaper_cmd = { "awsetbg /home/azuwis/theme/wallpapers/dark/wood/1600x1200.jpg" }
+--theme.wallpaper_cmd = { "awsetbg /home/azuwis/theme/wallpapers/dark/eleganceMod1400x1050.png" }
 -- }}}
 
 -- {{{ Styles
