@@ -2,6 +2,7 @@
 # Write your default config options here!
 quiet=yes
 overlapsub=yes
+use-filename-title=yes
 #ass=yes
 vo=xv
 fixed-vo=yes
