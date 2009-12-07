@@ -383,6 +383,8 @@ awful.rules.rules = {
       properties = { tag = tags[1][4] } },
     { rule = { class = "VirtualBox" },
       properties = { tag = tags[1][5] } },
+    { rule = { class = "VBoxSDL" },
+      properties = { tag = tags[1][5] } },
 }
 -- }}}
 
