@@ -81,7 +81,7 @@ vicious.register(cpuwidget, vicious.widgets.cpu, '$1', 3)
 
 -- Create a temperature widget
 thmwidget = widget({ type = "textbox" })
-vicious.register(thmwidget, vicious.widgets.thermal, "$1°", 19, "THM0")
+vicious.register(thmwidget, vicious.widgets.thermal, "$1°", 19, "thermal_zone0")
 
 -- Create a net widget
 netwidget = widget({ type = "textbox" })
