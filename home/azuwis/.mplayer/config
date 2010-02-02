@@ -5,6 +5,7 @@ overlapsub=yes
 use-filename-title=yes
 #ass=yes
 vo=xv
+ao=alsa
 fixed-vo=yes
 softvol=yes
 softvol-max=140
@@ -33,13 +34,13 @@ subcp=GBK,BIG-5,CP932,CP949,UTF-8,UTF-16
 
 unrarexec=/usr/bin/unrar
 #vf=expand=:::::35/22:2
-cache=8192
+#cache=8192
 double=yes
 stop-xscreensaver=yes
 #heartbeat-cmd="xscreensaver-command  -deactivate"
 
 # ffmpeg-mt
-lavdopts=threads=2
+#lavdopts=threads=2
 
 [protocol.dvdnav]
 profile-desc="profile for dvdnav:// streams"

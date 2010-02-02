@@ -17,4 +17,4 @@ export PROMPT_COMMAND="echo -ne '\a'"
 # psp
 export PSPDEV="/usr/local/pspdev"
 export PSPSDK="$PSPDEV/psp/sdk"
-export PATH="$PATH:$PSPDEV/bin:$PSPSDK/bin"
+export PATH="$PATH:$PSPDEV/bin:$PSPSDK/bin:$HOME/.cabal/bin"

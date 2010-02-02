@@ -8,7 +8,7 @@ URxvt.depth:		32
 !URxvt.shading:  20
 
 !URxvt.background:	rgba:0000/0000/0000/CCCC
-URxvt.background:	rgba:0000/0000/0000/E000
+URxvt.background:	rgba:0000/0000/0000/E666
 !URxvt.foreground:	white
 !URxvt.background:	rgba:1111/1111/1111/DDDD
 URxvt.foreground:	rgba:BBBB/BBBB/BBBB/FFFF
@@ -46,8 +46,8 @@ URxvt.perl-ext-common:	default,matcher
 URxvt.urlLauncher:	x-www-browser
 URxvt.matcher.button:	2
 !URxvt.preeditType:  OverTheSpot
-URxvt.preeditType:  Root
-URxvt.imFont:   -misc-fixed-medium-r-normal--18-120-100-100-c-90-iso10646-1
+!URxvt.preeditType:  Root
+!URxvt.imFont:   -misc-fixed-medium-r-normal--18-120-100-100-c-90-iso10646-1
 
 URxvt.underlineColor: #444444
 URxvt.cursorColor: #aaaaaa

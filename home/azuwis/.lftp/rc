@@ -1,4 +1,5 @@
 debug 4
+set net:limit-rate 4194304
 set ftp:fix-pasv-address 0
 set ftp:use-fxp off
 set net:reconnect-interval-base 28
@@ -7,9 +8,12 @@ set bmk:save-passwords 1
 set ftp:charset "gbk"
 set file:charset "UTF-8"
 set mirror:order "*.srt *.idx *.sub *.rar *.nfo */"
-set ftp:anon-pass "azuwis@azu.2288.org"
-set net:persist-retries 500
-set ftp:retry-530 "incorrect"
-set ftp:retry-530-anonymous "incorrect"
+set ftp:anon-pass "mozilla@"
+set ftp:client ""
+set http:user-agent "Mozilla/4.7 [en] (WinNT; I)"
+set dns:order "inet inet6"
+#set net:persist-retries 500
+#set ftp:retry-530 "incorrect"
+#set ftp:retry-530-anonymous "incorrect"
 set mirror:set-permissions 0
 alias lls !ls

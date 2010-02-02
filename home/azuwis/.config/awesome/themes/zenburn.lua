@@ -8,7 +8,7 @@
 
 -- {{{ Main
 theme = {}
-theme.wallpaper_cmd = { "awsetbg /home/azuwis/theme/wallpapers/dark/wood/1600x1200.jpg" }
+theme.wallpaper_cmd = { "awsetbg -t '/home/azuwis/theme/wallpapers/apple/Small Ripples graphite.png'" }
 --theme.wallpaper_cmd = { "awsetbg /home/azuwis/theme/wallpapers/dark/eleganceMod1400x1050.png" }
 -- }}}
 
@@ -81,7 +81,7 @@ theme.taglist_squares_unsel = "/usr/share/awesome/themes/zenburn/taglist/squarez
 -- {{{ Misc
 theme.awesome_icon           = "/usr/share/awesome/themes/zenburn/awesome-icon.png"
 theme.menu_submenu_icon      = "/usr/share/awesome/themes/default/submenu.png"
-theme.tasklist_floating_icon = "/usr/share/awesome/themes/zenburn/titlebar/maximized_normal_active.png"
+theme.tasklist_floating_icon = "/home/azuwis/.config/awesome/themes/float.png"
 -- }}}
 
 -- {{{ Layout

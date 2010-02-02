@@ -14,7 +14,7 @@ require("vicious")
 beautiful.init("/home/azuwis/.config/awesome/themes/zenburn.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "x-terminal-emulator"
+terminal = "urxvtcd"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -405,7 +405,7 @@ client.add_signal("manage", function (c, startup)
     if not startup then
         -- Set the windows at the slave,
         -- i.e. put it at the end of others instead of setting it master.
-        -- awful.client.setslave(c)
+        awful.client.setslave(c)
 
         -- Put windows in a smart way, only if they does not set an initial position.
         if not c.size_hints.user_position and not c.size_hints.program_position then
@@ -427,7 +427,7 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 mytimer = timer { timeout = 3600 }
 mytimer:add_signal("timeout", function()
     --awful.util.spawn("notify-send '             Time for a REST'")
-    awful.util.spawn("notify-send 'Time for a REST'")
+    awful.util.spawn("notify-send '          Time for a REST'")
 end)
 mytimer:start()
 
