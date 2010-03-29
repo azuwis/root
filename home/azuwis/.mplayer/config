@@ -29,8 +29,8 @@ fontconfig=yes
 #font=/usr/share/fonts/myfonts/msyh.ttf
 #fontconfig=no
 
-#subcp=enca:zh:UCS-2
-subcp=GBK,BIG-5,CP932,CP949,UTF-8,UTF-16
+subcp=enca:zh:UCS-2
+#subcp=GBK,BIG-5,CP932,CP949,UTF-8,UTF-16
 
 unrarexec=/usr/bin/unrar
 #vf=expand=:::::35/22:2

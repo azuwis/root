@@ -61,6 +61,12 @@ highlight StatusLineSecure color: black; background: #CCFF99;
 highlight TabClose display: none;
 "highlight TabIcon display: none;
 
+"""""" QuickMarks, only need to run once
+"""google reader share
+":qmark n javascript:var%20b=document.body;var%20GR________bookmarklet_domain='http://www.google.com';if(b&&!document.xmlVersion){void(z=document.createElement('script'));void(z.src='http://www.google.com/reader/ui/link-bookmarklet.js');void(b.appendChild(z));}else{}
+":qmark m https://mail.google.com/
+":qmark r https://www.google.com/reader/view/
+
 """""" Extension compatibility
 """From http://vimperator.org/trac/ticket/33
 "set! extensions.checkCompatibility=false
