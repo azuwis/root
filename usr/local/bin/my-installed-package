@@ -1,0 +1,2 @@
+#!/bin/sh
+aptitude --disable-columns --display-format "%p - %d" search '~i !~M !~prequired !~pimportant'
