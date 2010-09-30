@@ -104,3 +104,6 @@ let c_space_errors = 1
 
 " Enter to separate lines
 "nmap <CR> i<CR><Esc>
+
+" Save file using sudo
+command! -bar -nargs=0 SudoW   :silent exe "write !sudo tee % >/dev/null"|silent edit!
