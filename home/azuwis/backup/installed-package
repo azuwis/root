@@ -1,0 +1,48 @@
+acpi - displays information on ACPI devices
+acpi-support-base - scripts for handling base ACPI events such as the power button
+acpid - Advanced Configuration and Power Interface event daemon
+awesome - highly configurable, next generation framework window manager for X
+awesome-extra - additional modules for awesome
+bash-completion - programmable completion for the bash shell
+build-essential - Informational list of build-essential packages
+busybox - Tiny utilities for small and embedded systems
+chromium-browser - Chromium browser
+console-setup - console font and keymap setup program
+dmz-cursor-theme - Style neutral, scalable cursor theme
+dnsmasq - A small caching DNS proxy and DHCP/TFTP server
+dnsutils - Clients provided with BIND
+exuberant-ctags - build tag file indexes of source code definitions
+flashplugin-nonfree - Adobe Flash Player - browser plugin
+git - fast, scalable, distributed revision control system
+git-svn - fast, scalable, distributed revision control system (svn interoperability)
+grub-pc - GRand Unified Bootloader, version 2 (PC/BIOS version)
+ibus-gtk - New input method framework using dbus
+ibus-pinyin - pinyin engine for ibus
+ibus-qt4 - qt-immodule for ibus (QT4)
+iceweasel - Web browser based on Firefox
+im-config - Input method configuration framework
+initramfs-tools - tools for generating an initramfs
+insserv - Tool to organize boot sequence using LSB init.d script dependencies
+less - pager program similar to more
+libc6-i686 - Embedded GNU C Library: Shared libraries [i686 optimized]
+libgl1-mesa-dri - A free implementation of the OpenGL API -- DRI modules
+libgl1-mesa-glx - A free implementation of the OpenGL API -- GLX runtime
+libncurses5-dev - developer's libraries and docs for ncurses
+linux-headers-2.6-686 - Header files for Linux 2.6-686 (meta-package)
+linux-image-2.6-686 - Linux 2.6 for modern PCs (meta-package)
+locales - Embedded GNU C Library: National Language (locale) data [support]
+lzma - Compression method of 7z format in 7-Zip program
+openssh-client - secure shell (SSH) client, for secure access to remote machines
+openssh-server - secure shell (SSH) server, for secure access from remote machines
+os-prober - utility to detect other OSes on a set of drives
+putty-tools - command-line tools for SSH, SCP, and SFTP
+resolvconf - name server information handler
+rxvt-unicode - RXVT-like terminal emulator with Unicode support
+sudo - Provide limited super user privileges to specific users
+tcpdump - A powerful tool for network monitoring and data acquisition
+usbutils - Linux USB utilities
+vim - Vi IMproved - enhanced vi editor
+xcompmgr - X composition manager
+xinit - X server initialisation tool
+xlockmore - Lock X11 display until password is entered.
+xserver-xorg - the X.Org X server
