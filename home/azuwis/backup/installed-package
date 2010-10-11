@@ -12,6 +12,7 @@ dmz-cursor-theme - Style neutral, scalable cursor theme
 dnsmasq - A small caching DNS proxy and DHCP/TFTP server
 dnsutils - Clients provided with BIND
 exuberant-ctags - build tag file indexes of source code definitions
+fakeroot - Gives a fake root environment
 flashplugin-nonfree - Adobe Flash Player - browser plugin
 git - fast, scalable, distributed revision control system
 git-svn - fast, scalable, distributed revision control system (svn interoperability)
@@ -24,6 +25,7 @@ im-config - Input method configuration framework
 initramfs-tools - tools for generating an initramfs
 insserv - Tool to organize boot sequence using LSB init.d script dependencies
 less - pager program similar to more
+lftp - Sophisticated command-line FTP/HTTP client programs
 libc6-i686 - Embedded GNU C Library: Shared libraries [i686 optimized]
 libgl1-mesa-dri - A free implementation of the OpenGL API -- DRI modules
 libgl1-mesa-glx - A free implementation of the OpenGL API -- GLX runtime
@@ -36,12 +38,17 @@ openssh-client - secure shell (SSH) client, for secure access to remote machines
 openssh-server - secure shell (SSH) server, for secure access from remote machines
 os-prober - utility to detect other OSes on a set of drives
 putty-tools - command-line tools for SSH, SCP, and SFTP
+rar - Archiver for .rar files
 resolvconf - name server information handler
 rxvt-unicode - RXVT-like terminal emulator with Unicode support
 sudo - Provide limited super user privileges to specific users
 tcpdump - A powerful tool for network monitoring and data acquisition
+unrar - Unarchiver for .rar files (non-free version)
 usbutils - Linux USB utilities
 vim - Vi IMproved - enhanced vi editor
+virtualbox-guest-additions - guest additions iso image for VirtualBox
+virtualbox-ose-dkms - x86 virtualization solution - kernel module sources for dkms
+virtualbox-ose-qt - x86 virtualization solution - Qt based user interface
 xcompmgr - X composition manager
 xinit - X server initialisation tool
 xlockmore - Lock X11 display until password is entered.
