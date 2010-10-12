@@ -1,1 +1,2 @@
+PATH=$PATH:/usr/local/bin
 0 16 * * * my-installed-package > ~/backup/installed-package

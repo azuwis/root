@@ -1,0 +1,54 @@
+#!/usr/bin/python
+# http://stackoverflow.com/questions/348630/how-can-i-download-all-emails-with-attachments-from-gmail
+# http://github.com/simplegeo/python-oauth2
+
+import oauth2 as oauth
+import oauth2.clients.imap as imaplib
+import os
+
+from email import encoders
+from email.message import Message
+from email.mime.base import MIMEBase
+from email.mime.multipart import MIMEMultipart
+
+import sys
+sys.path.append('/home/azuwis/azuwis')
+import gmailoauth
+
+path = sys.argv[1]
+
+detach_dir = '.' # directory where to save attachments (default: current)
+
+consumer = oauth.Consumer('anonymous', 'anonymous')
+token = oauth.Token(gmailoauth.oauth_token, gmailoauth.oauth_token_secret)
+url = "https://mail.google.com/mail/b/%s/imap/" % gmailoauth.user
+
+# connecting to the gmail imap server
+m = imaplib.IMAP4_SSL("imap.gmail.com")
+m.authenticate(url, consumer, token)
+r = m.select("git-bundle")
+if r[0] != 'OK':
+	m.create("git-bundle")
+	r = m.select("git-bundle")
+	if r[0] != 'OK':
+		sys.stderr.write("can not create folder")
+		sys.exit(1)
+
+outer = MIMEMultipart()
+outer['Subject'] = path
+outer['To'] = gmailoauth.user
+outer['From'] = gmailoauth.user
+
+if not os.path.isfile(path):
+	sys.exit(1)
+
+fp = open(path, 'rb')
+msg = MIMEBase('application', 'octet-stream')
+msg.set_payload(fp.read())
+fp.close()
+
+encoders.encode_base64(msg)
+msg.add_header('Content-Disposition', 'attachment', filename=path)
+outer.attach(msg)
+
+print outer
