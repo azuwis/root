@@ -15,6 +15,7 @@ devscripts - scripts to make the life of a Debian Package maintainer easier
 dmz-cursor-theme - Style neutral, scalable cursor theme
 dnsmasq - A small caching DNS proxy and DHCP/TFTP server
 dnsutils - Clients provided with BIND
+duplicity - encrypted bandwidth-efficient backup
 emesene - platform independent MSN Messenger client
 empathy - GNOME multi-protocol chat and call client
 equivs - Circumvent Debian package dependencies
@@ -44,6 +45,7 @@ linux-headers-2.6-686 - Header files for Linux 2.6-686 (meta-package)
 linux-image-2.6-686 - Linux 2.6 for modern PCs (meta-package)
 locales - Embedded GNU C Library: National Language (locale) data [support]
 lzma - Compression method of 7z format in 7-Zip program
+ntpdate - client for setting system time from NTP servers
 openssh-client - secure shell (SSH) client, for secure access to remote machines
 openssh-server - secure shell (SSH) server, for secure access from remote machines
 os-prober - utility to detect other OSes on a set of drives
@@ -59,6 +61,7 @@ rxvt-unicode - RXVT-like terminal emulator with Unicode support
 sudo - Provide limited super user privileges to specific users
 tcpdump - A powerful tool for network monitoring and data acquisition
 telepathy-gabble - Jabber/XMPP connection manager
+telepathy-salut - Link-local XMPP connection manager for the Telepathy framework
 telnet - The telnet client
 unrar - Unarchiver for .rar files (non-free version)
 usbutils - Linux USB utilities

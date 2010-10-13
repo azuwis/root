@@ -1,2 +1,1 @@
-PATH=$PATH:/usr/local/bin
-0 16 * * * my-installed-package > ~/backup/installed-package
+0 16 * * * /usr/local/bin/my-installed-package > ~/backup/installed-package

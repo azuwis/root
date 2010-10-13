@@ -6,10 +6,13 @@ import oauth2 as oauth
 import oauth2.clients.imap as imaplib
 import os
 
+from datetime import datetime
+
 from email import encoders
 from email.message import Message
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
+from email.utils import formatdate
 
 import sys
 sys.path.append('/home/azuwis/azuwis')
@@ -38,6 +41,8 @@ outer = MIMEMultipart()
 outer['Subject'] = path
 outer['To'] = gmailoauth.user
 outer['From'] = gmailoauth.user
+date = formatdate()
+outer['Date'] = date
 
 if not os.path.isfile(path):
 	sys.exit(1)
@@ -51,4 +56,4 @@ encoders.encode_base64(msg)
 msg.add_header('Content-Disposition', 'attachment', filename=path)
 outer.attach(msg)
 
-print outer
+m.append('git-bundle', None, None, outer)
