@@ -10,6 +10,7 @@ busybox - Tiny utilities for small and embedded systems
 cdbs - common build system for Debian packages
 chromium-browser - Chromium browser
 console-setup - console font and keymap setup program
+cryptmount - Management of encrypted file systems
 debhelper - helper programs for debian/rules
 devscripts - scripts to make the life of a Debian Package maintainer easier
 dmz-cursor-theme - Style neutral, scalable cursor theme
@@ -19,6 +20,7 @@ duplicity - encrypted bandwidth-efficient backup
 emesene - platform independent MSN Messenger client
 empathy - GNOME multi-protocol chat and call client
 equivs - Circumvent Debian package dependencies
+etckeeper - store /etc in git, mercurial, bzr or darcs
 exuberant-ctags - build tag file indexes of source code definitions
 fakeroot - Gives a fake root environment
 flashplugin-nonfree - Adobe Flash Player - browser plugin
@@ -28,6 +30,7 @@ gnupg-agent - GNU privacy guard - password agent
 grub-pc - GRand Unified Bootloader, version 2 (PC/BIOS version)
 gstreamer0.10-alsa - GStreamer plugin for ALSA
 gstreamer0.10-plugins-base - GStreamer plugins from the "base" set
+gtk-chtheme - GTK+ 2.0 theme changer and previewer utility
 ibus-gtk - New input method framework using dbus
 ibus-pinyin - pinyin engine for ibus
 ibus-qt4 - qt-immodule for ibus (QT4)
@@ -35,6 +38,7 @@ iceweasel - Web browser based on Firefox
 im-config - Input method configuration framework
 initramfs-tools - tools for generating an initramfs
 insserv - Tool to organize boot sequence using LSB init.d script dependencies
+iotop - simple top-like I/O monitor
 less - pager program similar to more
 lftp - Sophisticated command-line FTP/HTTP client programs
 libc6-i686 - Embedded GNU C Library: Shared libraries [i686 optimized]
@@ -49,6 +53,7 @@ ntpdate - client for setting system time from NTP servers
 openssh-client - secure shell (SSH) client, for secure access to remote machines
 openssh-server - secure shell (SSH) server, for secure access from remote machines
 os-prober - utility to detect other OSes on a set of drives
+parcellite - lightweight GTK+ clipboard manager
 putty-tools - command-line tools for SSH, SCP, and SFTP
 python-gst0.10 - generic media-playing framework (Python bindings)
 python-gtkspell - Python bindings for the GtkSpell library
@@ -57,7 +62,11 @@ python-oauth2 - A Python OAuth class with several useful
 python-oauth2-build-deps - build-dependencies for python-oauth2
 rar - Archiver for .rar files
 resolvconf - name server information handler
+rtorrent - ncurses BitTorrent client based on LibTorrent from rakshasa
 rxvt-unicode - RXVT-like terminal emulator with Unicode support
+screen - terminal multiplexor with VT100/ANSI terminal emulation
+shiki-brave-theme - blue variation of the Shiki-Colors theme
+steghide - A steganography hiding tool
 sudo - Provide limited super user privileges to specific users
 tcpdump - A powerful tool for network monitoring and data acquisition
 telepathy-gabble - Jabber/XMPP connection manager
