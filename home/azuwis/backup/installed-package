@@ -3,6 +3,7 @@ acpi-support-base - scripts for handling base ACPI events such as the power butt
 acpid - Advanced Configuration and Power Interface event daemon
 alsa-utils - Utilities for configuring and using ALSA
 aria2 - High speed download utility
+autossh - Automatically restart SSH sessions and tunnels
 awesome - highly configurable, next generation framework window manager for X
 awesome-extra - additional modules for awesome
 bash-completion - programmable completion for the bash shell
@@ -12,6 +13,7 @@ cdbs - common build system for Debian packages
 chromium-browser - Chromium browser
 console-setup - console font and keymap setup program
 cryptmount - Management of encrypted file systems
+debconf-utils - debconf utilities
 debhelper - helper programs for debian/rules
 devscripts - scripts to make the life of a Debian Package maintainer easier
 dmz-cursor-theme - Style neutral, scalable cursor theme
@@ -25,7 +27,10 @@ etckeeper - store /etc in git, mercurial, bzr or darcs
 evince - Document (postscript, pdf) viewer
 exuberant-ctags - build tag file indexes of source code definitions
 fakeroot - Gives a fake root environment
+feh - imlib2 based image viewer
 flashplugin-nonfree - Adobe Flash Player - browser plugin
+flex - A fast lexical analyzer generator.
+gawk - GNU awk, a pattern scanning and processing language
 git - fast, scalable, distributed revision control system
 git-svn - fast, scalable, distributed revision control system (svn interoperability)
 gnupg-agent - GNU privacy guard - password agent
@@ -33,6 +38,8 @@ grub-pc - GRand Unified Bootloader, version 2 (PC/BIOS version)
 gstreamer0.10-alsa - GStreamer plugin for ALSA
 gstreamer0.10-plugins-base - GStreamer plugins from the "base" set
 gtk-chtheme - GTK+ 2.0 theme changer and previewer utility
+hotot - Lightweight Twitter Client base on Gtk2 and Webkit.
+hotot-build-deps - build-dependencies for hotot
 ibus-gtk - New input method framework using dbus
 ibus-pinyin - pinyin engine for ibus
 ibus-qt4 - qt-immodule for ibus (QT4)
@@ -51,6 +58,7 @@ linux-headers-2.6-686 - Header files for Linux 2.6-686 (meta-package)
 linux-image-2.6-686 - Linux 2.6 for modern PCs (meta-package)
 locales - Embedded GNU C Library: National Language (locale) data [support]
 lzma - Compression method of 7z format in 7-Zip program
+mercurial - scalable distributed version control system
 mplayer - movie player for Unix-like systems
 mplayer-build-deps - build-dependencies for mplayer
 ntfs-3g - read-write NTFS driver for FUSE
@@ -59,6 +67,7 @@ openssh-client - secure shell (SSH) client, for secure access to remote machines
 openssh-server - secure shell (SSH) server, for secure access from remote machines
 os-prober - utility to detect other OSes on a set of drives
 parcellite - lightweight GTK+ clipboard manager
+pcmanfm - an extremely fast and lightweight file manager
 putty-tools - command-line tools for SSH, SCP, and SFTP
 python-gst0.10 - generic media-playing framework (Python bindings)
 python-gtkspell - Python bindings for the GtkSpell library
@@ -76,9 +85,9 @@ subversion - Advanced version control system
 sudo - Provide limited super user privileges to specific users
 tcpdump - A powerful tool for network monitoring and data acquisition
 telepathy-gabble - Jabber/XMPP connection manager
-telepathy-salut - Link-local XMPP connection manager for the Telepathy framework
 telnet - The telnet client
 unrar - Unarchiver for .rar files (non-free version)
+unzip - De-archiver for .zip files
 usbutils - Linux USB utilities
 vim - Vi IMproved - enhanced vi editor
 virtualbox-guest-additions - guest additions iso image for VirtualBox
