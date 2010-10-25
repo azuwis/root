@@ -1,0 +1,2 @@
+Apt::Install-Recommends "false";
+aptitude::UI::Package-Status-Format "%d%0t";

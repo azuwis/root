@@ -58,9 +58,12 @@ linux-headers-2.6-686 - Header files for Linux 2.6-686 (meta-package)
 linux-image-2.6-686 - Linux 2.6 for modern PCs (meta-package)
 locales - Embedded GNU C Library: National Language (locale) data [support]
 lzma - Compression method of 7z format in 7-Zip program
+mencoder - MPlayer's Movie Encoder
 mercurial - scalable distributed version control system
 mplayer - movie player for Unix-like systems
 mplayer-build-deps - build-dependencies for mplayer
+multistrap - multiple repository bootstrap based on apt
+nmap - The Network Mapper
 ntfs-3g - read-write NTFS driver for FUSE
 ntpdate - client for setting system time from NTP servers
 openssh-client - secure shell (SSH) client, for secure access to remote machines
