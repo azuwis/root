@@ -1,0 +1,15 @@
+#!/bin/sh
+. my-env-setup
+
+# backup repo list
+my-backup-repo-config
+
+# backup debconf
+debconf-get-selections > $CRYPT_DIR/debconf 2>/dev/null
+
+# export env, for gpg
+source $CRYPT_DIR/duplicity
+export PASSPHRASE
+
+# backup using gmail imap, duplicity is mailbox, home is from address
+duplicity $@ --imap-mailbox duplicity --include-globbing-filelist $MISC_DIR/duplicity-list $HOME imaps://${gmail_user}:${gmail_pass}@imap.gmail.com/home
