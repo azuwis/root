@@ -2,6 +2,7 @@ acpi - displays information on ACPI devices
 acpi-support-base - scripts for handling base ACPI events such as the power button
 acpid - Advanced Configuration and Power Interface event daemon
 alsa-utils - Utilities for configuring and using ALSA
+amule-utils-gui - graphic utilities for aMule
 aria2 - High speed download utility
 autossh - Automatically restart SSH sessions and tunnels
 awesome - highly configurable, next generation framework window manager for X
@@ -11,8 +12,10 @@ build-essential - Informational list of build-essential packages
 busybox - Tiny utilities for small and embedded systems
 cdbs - common build system for Debian packages
 chromium-browser - Chromium browser
+comix - GTK Comic Book Viewer
 console-setup - console font and keymap setup program
 cryptmount - Management of encrypted file systems
+curl - Get a file from an HTTP, HTTPS or FTP server
 debconf-utils - debconf utilities
 debhelper - helper programs for debian/rules
 devscripts - scripts to make the life of a Debian Package maintainer easier
@@ -20,6 +23,7 @@ dmz-cursor-theme - Style neutral, scalable cursor theme
 dnsmasq - A small caching DNS proxy and DHCP/TFTP server
 dnsutils - Clients provided with BIND
 duplicity - encrypted bandwidth-efficient backup
+emdebian-crush - emdebian crossbuilding helpers
 emesene - platform independent MSN Messenger client
 empathy - GNOME multi-protocol chat and call client
 equivs - Circumvent Debian package dependencies
@@ -51,9 +55,12 @@ iotop - simple top-like I/O monitor
 less - pager program similar to more
 lftp - Sophisticated command-line FTP/HTTP client programs
 libc6-i686 - Embedded GNU C Library: Shared libraries [i686 optimized]
+libgd-gd2-perl - Perl module wrapper for libgd - gd2 variant
 libgl1-mesa-dri - A free implementation of the OpenGL API -- DRI modules
 libgl1-mesa-glx - A free implementation of the OpenGL API -- GLX runtime
+libgtk2-perl - Perl interface to the 2.x series of the Gimp Toolkit library
 libncurses5-dev - developer's libraries and docs for ncurses
+libwww-curl-perl - Perl bindings to libcurl
 linux-headers-2.6-686 - Header files for Linux 2.6-686 (meta-package)
 linux-image-2.6-686 - Linux 2.6 for modern PCs (meta-package)
 locales - Embedded GNU C Library: National Language (locale) data [support]
@@ -89,6 +96,8 @@ sudo - Provide limited super user privileges to specific users
 tcpdump - A powerful tool for network monitoring and data acquisition
 telepathy-gabble - Jabber/XMPP connection manager
 telnet - The telnet client
+tesseract-ocr - Command line OCR tool
+tree - displays directory tree, in color
 unrar - Unarchiver for .rar files (non-free version)
 unzip - De-archiver for .zip files
 usbutils - Linux USB utilities

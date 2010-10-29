@@ -12,4 +12,4 @@ source $CRYPT_DIR/duplicity
 export PASSPHRASE
 
 # backup using gmail imap, duplicity is mailbox, home is from address
-duplicity $@ --imap-mailbox duplicity --include-globbing-filelist $MISC_DIR/duplicity-list $HOME imaps://${gmail_user}:${gmail_pass}@imap.gmail.com/home
+duplicity $@ --imap-mailbox duplicity --include-globbing-filelist $CRYPT_DIR/duplicity-list $HOME imaps://${gmail_user}:${gmail_pass}@imap.gmail.com/home
