@@ -1,8 +1,4 @@
 #!/bin/bash
 . my-env-setup
 cd $REPO_DIR
-rm -rf repo
-for i in `find -maxdepth 4 -type f -path "*.git/config"`
-do
-	install -D $i repo/$i
-done
+rsync -R `find -maxdepth 4 -type f -path "*.git/config"` repo

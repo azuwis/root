@@ -86,6 +86,7 @@ python-oauth2 - A Python OAuth class with several useful
 python-oauth2-build-deps - build-dependencies for python-oauth2
 rar - Archiver for .rar files
 resolvconf - name server information handler
+rsync - fast remote file copy program (like rcp)
 rtorrent - ncurses BitTorrent client based on LibTorrent from rakshasa
 rxvt-unicode - RXVT-like terminal emulator with Unicode support
 screen - terminal multiplexor with VT100/ANSI terminal emulation
@@ -97,7 +98,6 @@ tcpdump - A powerful tool for network monitoring and data acquisition
 telepathy-gabble - Jabber/XMPP connection manager
 telnet - The telnet client
 tesseract-ocr - Command line OCR tool
-tree - displays directory tree, in color
 unrar - Unarchiver for .rar files (non-free version)
 unzip - De-archiver for .zip files
 usbutils - Linux USB utilities
