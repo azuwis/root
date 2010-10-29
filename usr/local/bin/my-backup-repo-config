@@ -1,4 +1,4 @@
 #!/bin/bash
 . my-env-setup
 cd $REPO_DIR
-rsync -R `find -maxdepth 4 -type f -path "*.git/config"` repo
+rsync -t -R `find -maxdepth 4 -type f -path "*.git/config"` repo
