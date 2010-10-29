@@ -1,0 +1,6 @@
+#!/bin/sh
+t=$(mktemp -d)
+v=$(dpkg-query --show --showformat '${Version}' libxmlrpc-c3)
+curl http://ftp.us.debian.org/debian/pool/main/x/xmlrpc-c/libxmlrpc-c3-dev_${v}_mipsel.deb > $t/xmlrpc.deb
+dpkg -x $t/xmlrpc.deb $t
+cp $t/usr/bin/xmlrpc /usr/bin

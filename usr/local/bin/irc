@@ -1,0 +1,3 @@
+#!/bin/sh
+. $(dirname $0)/functions.sh
+exec dtach -A /tmp/irssi.dtach irssi

@@ -1,0 +1,10 @@
+/mnt/data/torrent/watch
+/mnt/data/torrent/watch_pt
+/mnt/data/torrent/download
+/mnt/data/torrent/download_pt
+/mnt/data/torrent/ongoing
+/var/lib/rstats
+
+/mnt/data/ed2k/Temp
+/mnt/data/ed2k/Incoming
+/var/cache/rtorrent

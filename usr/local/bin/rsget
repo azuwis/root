@@ -1,0 +1,4 @@
+#!/bin/sh
+. $(dirname $0)/functions.sh
+cd $HOME/rsget
+exec dtach -A /tmp/rsget.dtach ./rsget.pl

@@ -1,0 +1,20 @@
+#!/bin/sh
+. $(dirname $0)/config.sh
+. $(dirname $0)/functions.sh
+
+case $1 in
+http://chdbits.org*)
+	id=$(echo $1 | sed 's/[^0-9]*\([0-9]*\).*/\1/')
+	watch=$(sed -n '/watch_directory_pt/s/.*load_start=\(.*\)\/\*\.torrent.*/\1/p' /etc/rtorrent.rc)
+	cd $watch || exit 1
+	exec curl --globoff --location --remote-name --remote-header-name "http://chdbits.org/download.php?id=${id}&passkey=$chd_passkey"
+	;;
+http://*)
+	watch=$(sed -n '/watch_directory_limit/s/.*load_start=\(.*\)\/\*\.torrent.*/\1/p' /etc/rtorrent.rc)
+	cd $watch || exit 1
+	exec curl --globoff --location --remote-name --remote-header-name "$1"
+	;;
+*)
+	exec dtach -A /tmp/rtorrent.dtach rtorrent -n -o import=/etc/rtorrent.rc
+	;;
+esac

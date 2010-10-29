@@ -1,0 +1,33 @@
+#!/bin/sh
+. $(dirname $0)/config.sh
+
+export PATH=/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin
+export DEBIAN_FRONTEND=noninteractive
+export DEBCONF_NONINTERACTIVE_SEEN=true
+export LC_ALL=C LANGUAGE=C LANG=C
+
+export debian_chroot=debian
+
+export USER=azuwis
+if [ x"$1" = x"-u" ]; then
+	USER=$2
+	shift 2
+fi
+export LOGNAME=$USER
+export HOME=$(awk -F: '/^'$USER':/{print $6}' $root/etc/passwd)
+export SHELL=$(awk -F: '/^'$USER':/{print $7}' $root/etc/passwd)
+
+#chmod g+w /dev/tty
+
+groups=$(awk -F: '{if ($4 == "'$USER'") printf $1","}' $root/etc/group)
+
+chroot="$root/lib/ld.so.1 --library-path $root/lib $root/usr/sbin/chroot --userspec=$USER: --groups=$groups $root"
+
+# make tty writable by group root
+$root/lib/ld.so.1 --library-path $root/lib $root/bin/chmod g+w /dev/tty
+
+if [ $# -eq 0 ]; then
+	exec $chroot $SHELL
+else
+	exec $chroot "$@"
+fi
