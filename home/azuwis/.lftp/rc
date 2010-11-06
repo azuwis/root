@@ -1,5 +1,5 @@
 debug 4
-set net:limit-rate 4194304
+#set net:limit-rate 4194304
 set ftp:fix-pasv-address 0
 set ftp:use-fxp off
 set net:reconnect-interval-base 28

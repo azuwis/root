@@ -28,6 +28,7 @@ modkey = "Mod4"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 layouts =
 {
+    awful.layout.suit.floating,
     awful.layout.suit.tile,
     awful.layout.suit.tile.left,
     awful.layout.suit.tile.bottom,
@@ -38,8 +39,7 @@ layouts =
     awful.layout.suit.spiral.dwindle,
     awful.layout.suit.max,
     awful.layout.suit.max.fullscreen,
-    awful.layout.suit.magnifier,
-    awful.layout.suit.floating
+    awful.layout.suit.magnifier
 }
 -- }}}
 
@@ -48,7 +48,7 @@ layouts =
 tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
-    tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s)
+    tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, layouts[1])
 end
 -- }}}
 
@@ -66,8 +66,6 @@ mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesom
                                   }
                         })
 
---mylauncher = awful.widget.launcher({ image = image(beautiful.awesome_icon),
---                                     menu = mymainmenu })
 -- }}}
 
 -- {{{ Wibox
@@ -85,7 +83,7 @@ vicious.register(thmwidget, vicious.widgets.thermal, "$1°", 19, "thermal_zone0"
 
 -- Create a net widget
 netwidget = widget({ type = "textbox" })
-vicious.register(netwidget, vicious.widgets.net, "${total down_kb}/${total up_kb}kb ", 3)
+vicious.register(netwidget, vicious.widgets.net, "${eth0 down_kb}/${eth0 up_kb}kb ", 3)
 
 -- Create a textclock widget
 mytextclock = awful.widget.textclock({ align = "left" }, " %a %m/%d <b>%H:%M</b> ")
@@ -196,7 +194,7 @@ globalkeys = awful.util.table.join(
             awful.client.focus.byidx(-1)
             if client.focus then client.focus:raise() end
         end),
-    awful.key({ modkey,           }, "w", function () mymainmenu:show(true)        end),
+    awful.key({ modkey,           }, "w", function () mymainmenu:show({keygrabber=true}) end),
 
     -- Window info
     awful.key({ modkey, "Control" }, "i",
@@ -236,12 +234,12 @@ globalkeys = awful.util.table.join(
         end),
 
     -- App
-    awful.key({ }, "Pause", function () awful.util.spawn("/home/azuwis/bin/lock-screen.sh") end),
-    awful.key({ }, "XF86Display", function () awful.util.spawn("/home/azuwis/bin/extern_monitor.sh right") end),
+    awful.key({ }, "Pause", function () awful.util.spawn("xlock") end),
+    awful.key({ }, "XF86Display", function () awful.util.spawn("my-extern-monitor right") end),
 
     -- Volume
-    awful.key({ modkey }, ".", function () awful.util.spawn("/home/azuwis/bin/myvolume.sh up") end),
-    awful.key({ modkey }, ",", function () awful.util.spawn("/home/azuwis/bin/myvolume.sh down") end),
+    awful.key({ modkey }, ".", function () awful.util.spawn("my-volume up") end),
+    awful.key({ modkey }, ",", function () awful.util.spawn("my-volume down") end),
 
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end),
@@ -290,6 +288,7 @@ clientkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end),
     awful.key({ modkey,           }, "o",      awful.client.movetoscreen                        ),
     awful.key({ modkey, "Shift"   }, "r",      function (c) c:redraw()                       end),
+    awful.key({ modkey,           }, "t",      function (c) c.ontop = not c.ontop            end),
     awful.key({ modkey,           }, "n",      function (c) c.minimized = not c.minimized    end),
     awful.key({ modkey,           }, "m",
         function (c)
@@ -300,8 +299,6 @@ clientkeys = awful.util.table.join(
                 c.maximized_horizontal = true
                 c.maximized_vertical = true
             end
-            --c.maximized_horizontal = not c.maximized_horizontal
-            --c.maximized_vertical   = not c.maximized_vertical
         end)
 )
 
@@ -375,12 +372,21 @@ awful.rules.rules = {
     -- Set Firefox to always map on tags number 2 of screen 1.
     { rule = { class = "Firefox", instance = "Navigator" },
       properties = { tag = tags[1][2] } },
+    { rule = { class = "Iceweasel", instance = "Navigator" },
+      properties = { tag = tags[1][2] } },
     { rule = { class = "Chromium-browser" },
       properties = { tag = tags[1][2] } },
+    -- screen 3
     { rule = { class = "Icedove-bin" },
       properties = { tag = tags[1][3] } },
+    -- screen 4
     { rule = { class = "Pidgin" },
       properties = { tag = tags[1][4] } },
+    { rule = { class = "emesene" },
+      properties = { tag = tags[1][4] } },
+    { rule = { class = "Empathy" },
+      properties = { tag = tags[1][4] } },
+    -- screen 5
     { rule = { class = "VirtualBox" },
       properties = { tag = tags[1][5] } },
     { rule = { class = "VBoxSDL" },
@@ -431,5 +437,5 @@ mytimer:add_signal("timeout", function()
 end)
 mytimer:start()
 
-awful.util.spawn("/home/azuwis/bin/auto-start.sh")
+awful.util.spawn("my-auto-start")
 -- }}}
