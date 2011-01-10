@@ -1,8 +1,8 @@
 /mnt/data/torrent/watch
 /mnt/data/torrent/watch_pt
-/mnt/data/torrent/download
-/mnt/data/torrent/download_pt
-/mnt/data/torrent/ongoing
+/mnt/data/torrent/done
+/mnt/data/torrent/done_pt
+/mnt/data/torrent/partial
 /var/lib/rstats
 
 /mnt/data/ed2k/Temp

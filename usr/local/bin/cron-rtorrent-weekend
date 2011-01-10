@@ -1,0 +1,4 @@
+#!/bin/sh
+. $(dirname $0)/functions.sh
+xmlrpc http://127.0.0.1:8081/RPC2 set_download_rate 50k
+xmlrpc http://127.0.0.1:8081/RPC2 set_upload_rate 18k

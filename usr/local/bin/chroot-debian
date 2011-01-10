@@ -4,7 +4,7 @@
 export PATH=/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin
 export DEBIAN_FRONTEND=noninteractive
 export DEBCONF_NONINTERACTIVE_SEEN=true
-export LC_ALL=C LANGUAGE=C LANG=C
+export LC_ALL=en_US.UTF-8 LANGUAGE=en_US.UTF-8 LANG=en_US.UTF-8
 
 export debian_chroot=debian
 

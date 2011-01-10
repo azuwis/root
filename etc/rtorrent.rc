@@ -20,15 +20,15 @@ max_peers_seed = 30
 max_uploads = 8
 
 # Global upload and download rate in KiB. "0" for unlimited.
-download_rate = 185
-upload_rate = 28
+download_rate = 0
+upload_rate = 20
 
 # Max upload slot = max upload rate / max_uploads_div
 max_uploads_div = 3
 
 # Rate schedule
-schedule = throttle_1,03:00:00,24:00:00,"download_rate=185,upload_rate=28"
-schedule = throttle_2,19:00:00,24:00:00,"download_rate=80,upload_rate=16"
+schedule = throttle_1,03:00:00,24:00:00,"download_rate=0;upload_rate=40"
+schedule = throttle_2,19:00:00,24:00:00,"download_rate=50;upload_rate=15"
 
 # Throttle
 throttle_up = 5u,5
@@ -36,23 +36,16 @@ throttle_down = 10d,10
 throttle_up = 5u10d,5
 throttle_down = 5u10d,10
 
-# Enable the default ratio group.
-group.seeding.ratio.enable =
-group.seeding.ratio.min.set = 10
-group.seeding.ratio.max.set = 100
-group.seeding.ratio.upload.set = 15M
-system.method.set = group.seeding.ratio.command,d.close=,d.erase=
-
-# Disable ratio for pt
-group.insert_persistent_view = pt
-group.pt.ratio.enable =
-group.pt.ratio.min.set = 100000
-group.pt.ratio.max.set = 100000
-group.pt.ratio.upload.set = 15M
-system.method.set = group.pt.ratio.command,d.close=
+# Enable the ratio for group limit.
+group.insert_persistent_view = limit
+group.limit.ratio.enable =
+group.limit.ratio.min.set = 10
+group.limit.ratio.max.set = 100
+group.limit.ratio.upload.set = 15M
+system.method.set = group.limit.ratio.command,d.close=,d.erase=
 
 # Default directory to save the downloaded torrents.
-directory = /mnt/data/torrent/ongoing
+directory = /mnt/data/torrent/partial
 
 # Default session directory. Make sure you don't run multiple instance
 # of rtorrent using the same session directory. Perhaps using a
@@ -61,8 +54,8 @@ session = /var/cache/rtorrent
 
 # Watch a directory for new torrents, and stop those that have been
 # deleted.
-schedule = watch_directory_limit,20,20,"load_start=/mnt/data/torrent/watch/*.torrent,d.set_custom1=/mnt/data/torrent/download,d.set_throttle_name=5u"
-schedule = watch_directory_pt,20,20,"load_start=/mnt/data/torrent/watch_pt/*.torrent,d.set_custom1=/mnt/data/torrent/download_pt,view.set_visible=pt"
+schedule = watch_directory_limit,20,20,"load_start=/mnt/data/torrent/watch/*.torrent,d.set_custom1=/mnt/data/torrent/done,d.set_throttle_name=5u,view.set_visible=limit"
+schedule = watch_directory_pt,20,20,"load_start=/mnt/data/torrent/watch_pt/*.torrent,d.set_custom1=/mnt/data/torrent/done_pt"
 schedule = untied_directory,20,20,close_untied=
 
 # On completion, move the torrent to the directory from custom1

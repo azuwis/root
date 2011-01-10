@@ -1,6 +1,8 @@
 #!/bin/sh
 . $(dirname $0)/config.sh
 
+swapoff -a
+
 umount $root/mnt/data
 umount $root/dev/pts
 umount $root/dev

@@ -4,6 +4,7 @@
 !/usr/local
 /usr/local/*
 !/usr/local/bin
+usr/local/bin/config.sh
 !/home
 /home/*
 !/home/azuwis

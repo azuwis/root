@@ -27,7 +27,7 @@ cron_add() {
 		cru a "$1" "$2"
 	fi
 }
-cron_add rtorrent '1 9 * * 0,6 chroot-debian sh -c "xmlrpc http://127.0.0.1:8081/RPC2 set_download_rate 185k;xmlrpc http://127.0.0.1:8081/RPC2 set_upload_rate 18k"'
+cron_add rtorrent '1 9 * * 0,6 cron-rtorrent-weekend'
 
 cat /etc/mtab | grep $root | sed -e "s!$root!/!" -e 's!//!/!' > $root/etc/mtab
 cp /etc/resolv.conf $root/etc/

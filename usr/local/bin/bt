@@ -2,6 +2,8 @@
 . $(dirname $0)/config.sh
 . $(dirname $0)/functions.sh
 
+export TERM=linux
+
 case $1 in
 http://chdbits.org*)
 	id=$(echo $1 | sed 's/[^0-9]*\([0-9]*\).*/\1/')
@@ -14,7 +16,18 @@ http://*)
 	cd $watch || exit 1
 	exec curl --globoff --location --remote-name --remote-header-name "$1"
 	;;
+stop)
+	pkill rtorrent
+	;;
 *)
-	exec dtach -A /tmp/rtorrent.dtach rtorrent -n -o import=/etc/rtorrent.rc
+	if ! pgrep rtorrent 2>&1 >/dev/null; then
+		rm -f /tmp/rtorrent.*
+	fi
+	if tty -s; then
+		opt="-A"
+	else
+		opt="-n"
+	fi
+	exec dtach $opt /tmp/rtorrent.dtach -e @ rtorrent -n -o import=/etc/rtorrent.rc
 	;;
 esac
