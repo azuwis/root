@@ -1,0 +1,3 @@
+#!/bin/bash
+signapk_dir=~/android/signapk/SignApk
+java -jar $signapk_dir/signapk.jar $signapk_dir/certificate.pem $signapk_dir/key.pk8 "$1" "$2"
